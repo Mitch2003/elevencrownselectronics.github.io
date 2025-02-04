@@ -15,36 +15,39 @@
     </header>
 
     <nav>
-        <a href="iphones.html">iPhones</a>
-        <a href="applewatches.html">Apple Watches</a>
-        <a href="airpods.html">AirPods</a>
-        <a href="macbook.html">MacBooks</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links">
+            <li><a href="iphones.html">iPhones</a></li>
+            <li><a href="applewatches.html">Apple Watches</a></li>
+            <li><a href="airpods.html">AirPods</a></li>
+            <li><a href="macbooks.html">MacBooks</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>    
 
     <main>
         <h2>Browse Our Categories</h2>
-        <div class="category-grid">
-            <a href="iphones.html" class="category">
-                <img src="iphone.png" alt="iPhones">
-                <h3>iPhones</h3>
-            </a>
-
-            <a href="applewatches.html" class="category">
-                <img src="applewatch.png" alt="Apple Watches">
-                <h3>Apple Watches</h3>
-            </a>
-
-            <a href="airpods.html" class="category">
-                <img src="airpods.png" alt="AirPods">
-                <h3>AirPods</h3>
-            </a>
-
-            <a href="macbook.html" class="category">
-                <img src="macbook.png" alt="MacBooks">
-                <h3>Macbooks</h3>
-            </a>
-        </div>
+        <section id="categories" class="categories">
+            <h2>Browse by Category</h2>
+            <div class="category-grid">
+                <a href="iphones.html" class="category">
+                    <img src="iphone.png" alt="iPhones">
+                    <p>iPhones</p>
+                </a>
+                <a href="applewatches.html" class="category">
+                    <img src="applewatch.png" alt="Apple Watches">
+                    <p>Apple Watches</p>
+                </a>
+                <a href="airpods.html" class="category">
+                    <img src="airpods.png" alt="AirPods">
+                    <p>AirPods</p>
+                </a>
+                <a href="macbooks.html" class="category">
+                    <img src="macbook.png" alt="MacBooks">
+                    <p>MacBooks</p>
+                </a>
+            </div>
+        </section>        
     </main>
 
     <footer>
