@@ -7,54 +7,69 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <header>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <div class="logo">
             <img src="Eleven.jpg" alt="Elevencrowns Electronics Logo">
         </div>
-        <h1>Welcome to Elevencrowns Electronics</h1>
     </header>
-
-    <nav>
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-        <ul class="nav-links">
+    
+    <nav class="dropdown-menu" id="menu">
+        <ul>
             <li><a href="iphones.html">iPhones</a></li>
             <li><a href="applewatches.html">Apple Watches</a></li>
             <li><a href="airpods.html">AirPods</a></li>
-            <li><a href="macbooks.html">MacBooks</a></li>
+            <li><a href="macbook.html">MacBooks</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-    </nav>    
+    </nav>
+    
 
-    <main>
-        <h2>Browse Our Categories</h2>
-        <section id="categories" class="categories">
-            <h2>Browse by Category</h2>
-            <div class="category-grid">
-                <a href="iphones.html" class="category">
-                    <img src="iphone.png" alt="iPhones">
-                    <p>iPhones</p>
-                </a>
-                <a href="applewatches.html" class="category">
-                    <img src="applewatch.png" alt="Apple Watches">
-                    <p>Apple Watches</p>
-                </a>
-                <a href="airpods.html" class="category">
-                    <img src="airpods.png" alt="AirPods">
-                    <p>AirPods</p>
-                </a>
-                <a href="macbooks.html" class="category">
-                    <img src="macbook.png" alt="MacBooks">
-                    <p>MacBooks</p>
-                </a>
-            </div>
-        </section>        
-    </main>
-
+    <section class="categories">
+        <h2>Browse Our Products</h2>
+        <div class="category-grid">
+            <a href="iphones.html" class="category">
+                <img src="iphone.png" alt="iPhones">
+                <h3>iPhones</h3>
+            </a>
+            <a href="applewatches.html" class="category">
+                <img src="applewatch.png" alt="Apple Watches">
+                <h3>Apple Watches</h3>
+            </a>
+            <a href="airpods.html" class="category">
+                <img src="airpods.png" alt="AirPods">
+                <h3>AirPods</h3>
+            </a>
+            <a href="macbooks.html" class="category">
+                <img src="macbook.png" alt="MacBooks">
+                <h3>MacBooks</h3>
+            </a>
+        </div>
+    </section>
+    
+    
     <footer>
         <p>&copy; 2025 Elevencrowns Electronics. All rights reserved.</p>
         <a href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME" target="_blank">
             <img src="instagram.png" alt="Instagram" class="social-icon">
         </a>
-    </footer>    
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+        }
+    
+        // Close menu if clicking outside
+        document.addEventListener("click", function(event) {
+            var menu = document.getElementById("menu");
+            var toggle = document.querySelector(".menu-toggle");
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.style.display = "none";
+            }
+        });
+    </script>          
 </body>
 </html>

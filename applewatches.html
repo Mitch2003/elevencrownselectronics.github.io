@@ -8,19 +8,18 @@
 </head>
 <body>
     <header>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <div class="logo">
             <img src="Eleven.jpg" alt="Elevencrowns Electronics Logo">
         </div>
-        <h1>Apple Watches</h1>
     </header>
-
-    <nav>
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-        <ul class="nav-links">
+    
+    <nav class="dropdown-menu" id="menu">
+        <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="iphones.html">iPhones</a></li>
             <li><a href="airpods.html">AirPods</a></li>
-            <li><a href="macbooks.html">MacBooks</a></li>
+            <li><a href="macbook.html">MacBooks</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
@@ -92,6 +91,22 @@
         <a href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME" target="_blank">
             <img src="instagram.png" alt="Instagram" class="social-icon">
         </a>
-    </footer>    
+    </footer>  
+    
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+        }
+    
+        // Close menu if clicking outside
+        document.addEventListener("click", function(event) {
+            var menu = document.getElementById("menu");
+            var toggle = document.querySelector(".menu-toggle");
+            if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+                menu.style.display = "none";
+            }
+        });
+    </script>  
 </body>
 </html>
