@@ -242,20 +242,20 @@ main {
 
 @media screen and (max-width: 768px) {
     .product-grid {
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(3, 1fr); 
     }
     .product img {
-        max-width: 150px; 
+        max-width: 100px; 
     }
 }
 
 /* Mobile View (1 product per row) */
 @media screen and (max-width: 480px) {
     .product-grid {
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(3, 1fr); 
     }
     .product img {
-        max-width: 100px; 
+        max-width: 50px; 
     }
 }
 
