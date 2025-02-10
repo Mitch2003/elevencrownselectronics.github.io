@@ -225,7 +225,7 @@ main {
     }
 
     .category img {
-        max-width: 100px;
+        max-width: 180px;
     }
 }
 
@@ -235,7 +235,7 @@ main {
     }
 
     .category img {
-        max-width: 50px;
+        max-width: 100px;
     }
 }
 
@@ -260,7 +260,7 @@ main {
 /* Mobile View (1 product per row) */
 @media screen and (max-width: 480px) {
     .product-grid {
-        grid-template-columns: repeat(3, 1fr); 
+        grid-template-columns: repeat(2, 1fr); 
     }
     .product img {
         max-width: 50px; 
